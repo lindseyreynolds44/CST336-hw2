@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HW 2: Shopping Cart</title>
+        <meta charset="utf-8" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <!-- Add bootstrap CDN for complete CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro&display=swap" rel="stylesheet">
+        <!-- Add jQuery library from Google's CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="toolbar">
+                <a class="free-ship-label" href="#">FREE SHIPPING on orders $50+</a>
+                <a class="toolbar-item" href="construction.html">My Account</a>
+                <a class="toolbar-item" href="construction.html">Get Help</a>
+                <a class="cart" href="cart.html">CART</a>
+                <a class="toolbar-item" href="construction.html"> Search <span><img src="img/white-search-icon.png" alt="search icon"></span></a>
+            </nav>
+            <nav class="banner">
+                <a class="banner-item" href="store.html">Our Store</a>
+                <a class="banner-item" href="about.html">About Us</a>
+                <a class="site-title" href="index.html"><span><img src="img/coffee-icon.svg" alt="site icon"></span> Boom. Roasted!</a>
+                <a class="banner-item" href="construction.html">Gallery</a>
+                <a class="banner-item" href="construction.html">Blog</a>
+            </nav>
+        </header>
+        
+        <main>
+            <br>
+            <h2 class="cart-heading">Your Cart</h2>
+            <br>
+            <div id="cart-content">
+                <table>
+                    <tr id="table-header">
+                        <td></td>
+                        <td><strong>Product</strong></td>
+                        <td><strong>Price</strong></td>
+                        <td><strong>Quantity</strong></td>
+                        <td><strong>Total</strong></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td><img src="img/dark-roast.jpg" width="200" height="200" alt="Dark Roast Beans"></td>
+                        <td>1 lb Dark Roast Beans</td>
+                        <td>$24.99</td>
+                        <td><input type="number" class="quantity" id="item1" step="1"></td>
+                        <td>$<span id="total1">0</span></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td><img src="img/blue-mug.jpg" width="200" height="200" alt="Blue Coffee Mug"></td>
+                        <td>Blue Coffee Mug</td>
+                        <td>$10.00</td>
+                        <td><input type="number" class="quantity" id="item2" step="1"></td>
+                        <td>$<span id="total2">0</span></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td><img src="img/med-roast.jpg" width="200" height="200" alt="Medium Roast Beans"></td>
+                        <td>1 lb Medium Roast Beans</td>
+                        <td>$24.99</td>
+                        <td><input type="number" class="quantity" id="item3" step="1"></td>
+                        <td>$<span id="total3">0</span></td>
+                    </tr>
+                </table>
+                <section id="cart-total">
+                    <h4>Cart Total</h4>
+                    <hr>
+                    <ul>
+                        <li><strong>Subtotal: </strong> $<span id="subtotal">0.00</span></li>
+                        <li><strong>Shipping Method: </strong>
+                            <br>
+                            <!-- Radio buttons for shipping -->
+                            <input type="radio" class="shipping" name="shipping" value="fast">
+                            <label for="fast"> Two-Day <br> $12.99 </label>
+                            
+                            <input type="radio" class="shipping" name="shipping" value="slow">
+                            <label for="slow"> Ground <br> $5.99 </label></span>
+                        </li>
+                        <li id="total-label"><strong>Total: </strong><span id="total">$0.00</span></li>
+                    </ul>
+                </section>
+            </div>
+            
+            <br><br>
+            <h2 class="cart-heading">Customer Information</h2>
+            <br>
+            <div id="customer-wrapper">
+                
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+                
+                <label for="user-pw">Password</label>
+        		<input type="password" name="user-pw" id="user-pw">
+        		
+        		<a id="submit-btn" href="order-placed.html">Place Order</a>
+                <h5 id="error-msg"></h5>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer_content">
+                <div class="footer_text">
+                    CST336 Internet Programming. 2020&copy; Reynolds <br />
+                    <strong>Disclaimer:</strong> The information in this webpage is fictitious. 
+                    It is used for academic purposes only. 
+                </div>
+                <figure>
+                    <img src="img/csumb_round_logo.png" alt="CSUMB logo">
+                </figure>
+            </div>
+        </footer>
+    </body>
+</html>

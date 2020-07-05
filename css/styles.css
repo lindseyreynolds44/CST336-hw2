@@ -1,0 +1,253 @@
+
+/* --- Styling for whole site --- */
+
+nav, footer, main {
+    text-align: center;
+}
+
+h2, h4 {
+    font-family: 'Bebas Neue', serif;
+}
+
+/* Menu bar at the top of each page */
+.toolbar {
+    font-family: 'Maven Pro', serif;
+    background-color: #3D405B; /* Blue */
+    padding: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.toolbar-item {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+} 
+
+/* Alter toolbar links for hover */
+.toolbar-item:hover { 
+    border-bottom:2px #E07A5F solid;
+    color: white;
+    text-decoration: none;
+}
+
+.free-ship-label, .free-ship-label:hover {
+    text-decoration: none;   /* removes underline */
+    color: white;
+    padding-right: 80px;
+}
+
+.cart {
+    border-radius: 0 0 25px 25px;
+    background-color: #E07A5F;
+    color: white;
+    padding: 15px;
+}
+
+.cart:hover, .store-link:hover {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+
+/* Banner undernearth the top menu toolbar */
+.banner {
+    font-family: 'Bebas Neue', serif;
+    background-color: #F4F1DE; /* Off white */
+    padding: 25px;
+    font-size: 2em;
+    box-shadow: 10px 10px 8px #888888;
+    z-index: 10;
+}
+
+.banner a {
+    text-decoration: none;   /* removes underline */
+    color: #3D405B; /* Blue */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.banner-item:hover {
+    color: white;
+    background-color: #3D405B;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.site-title {
+    font-size: 2em;
+}
+
+.site-title:hover {
+    text-decoration: none;
+    color: #988675;
+}
+
+main {
+    margin: 40px auto;
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- Style for index.html --- */
+
+#index-content {
+    display:flex;
+    justify-content: center;
+    font-family: 'Maven Pro', serif;
+    margin: 100px 20px;
+    
+}
+
+.store-link {
+    border-radius: 25px;
+    background-color: #E07A5F;
+    color: white;
+    font-family: 'Bebas Neue', serif;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px 30px;
+    align-self: center;
+}
+
+
+/* --- Style for cart.html --- */
+
+#cart-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+table {
+    border: 1px #3D405B solid;
+    width: 700px;
+    font-family: 'Maven Pro', serif;
+}
+
+#table-header {
+    background-color: #AEAEAE;
+    font-size: 1.2em;
+    color: white;
+}
+
+.table-row {
+    border: 1px #3D405B solid;
+}
+
+td {
+    padding: 15px 25px;
+}
+
+.quantity {
+    width: 60px;
+}
+
+#cart-total {
+    border: 1px #3D405B solid;
+    background-color: #F4F1DE; /* Off white */
+    padding-top: 60px;
+    width: 300px;
+}
+
+ul {
+    font-family: 'Maven Pro', serif;
+    list-style-type: none;
+    text-align: left;
+}
+
+li {
+    padding: 10px;
+}
+
+#total-label {
+    font-size: 1.2em;
+}
+
+#customer-wrapper {
+    font-family: 'Maven Pro', serif;
+    border: 1px #3D405B solid;
+    padding: 30px 0;
+}
+
+#user-pw, #username {
+    margin-right: 20px;
+}
+
+#submit-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: #E07A5F;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#submit-btn:hover {
+    font-style: italic;
+}
+
+#error-msg {
+    margin: 15px;
+    color: red;
+}
+
+
+
+
+/* --- Style for construction page --- */
+#construction-content {
+    font-family: 'Maven Pro', serif;
+    margin-top:150px;
+    margin-bottom:300px;
+}
+
+
+#order-placed-content {
+    margin-top: 100px;
+    margin-bottom:800px;
+}
+
+
+/* --- Style for store page --- */
+
+.store-items {
+    font-family: 'Bebas Neue', serif;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 80px 10px;
+}
+
+#about-content{
+    margin-top:100px;
+    margin-bottom: 600px;
+}
+
+
+/* --- Style for footer --- */
+
+footer {
+    font-family: 'Maven Pro', serif;
+    background-color: #F4F1DE; /* Off white */
+    padding: 25px;
+    box-shadow: 8px 10px 10px 8px #888888;
+}
+
+.footer_content {
+    font-size: .9em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_content figure {
+    margin: 0 20px;
+    padding: 0;
+}
