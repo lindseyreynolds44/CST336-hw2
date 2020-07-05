@@ -16,6 +16,7 @@ h2, h4 {
     padding: 5px;
     font-size: 1.2em;
     text-decoration: none;
+    text-align: right;
 }
 
 .toolbar-item {
@@ -28,12 +29,6 @@ h2, h4 {
     border-bottom:2px #E07A5F solid;
     color: white;
     text-decoration: none;
-}
-
-.free-ship-label, .free-ship-label:hover {
-    text-decoration: none;   /* removes underline */
-    color: white;
-    padding-right: 80px;
 }
 
 .cart {
