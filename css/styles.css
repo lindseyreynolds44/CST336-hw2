@@ -24,7 +24,6 @@ h2, h4 {
     padding-right: 15px;
 } 
 
-/* Alter toolbar links for hover */
 .toolbar-item:hover { 
     border-bottom:2px #E07A5F solid;
     color: white;
@@ -84,6 +83,7 @@ h2, h4 {
     color: #988675;
 }
 
+/* Main contents of each page */
 main {
     margin: 40px auto;
     width: 1000px;
@@ -92,6 +92,7 @@ main {
     flex-direction: column;
     justify-content: center;
 }
+
 
 /* --- Style for index.html --- */
 
@@ -123,6 +124,7 @@ main {
     justify-content: center;
 }
 
+/* Table listing items in cart */
 table {
     border: 1px #3D405B solid;
     width: 700px;
@@ -144,9 +146,10 @@ td {
 }
 
 .quantity {
-    width: 60px;
+    width: 60px; /* Minimize input text box */
 }
 
+/* Box on the right, displaying cart totals */
 #cart-total {
     border: 1px #3D405B solid;
     background-color: #F4F1DE; /* Off white */
@@ -168,6 +171,7 @@ li {
     font-size: 1.2em;
 }
 
+/* Bottom box displaying user and password text fields */
 #customer-wrapper {
     font-family: 'Maven Pro', serif;
     border: 1px #3D405B solid;
@@ -198,22 +202,21 @@ li {
 
 
 
-
-/* --- Style for construction page --- */
+/* --- Style for construction.html --- */
 #construction-content {
     font-family: 'Maven Pro', serif;
     margin-top:150px;
     margin-bottom:300px;
 }
 
-
+/* --- Style for order-placed.html --- */
 #order-placed-content {
     margin-top: 100px;
     margin-bottom:800px;
 }
 
 
-/* --- Style for store page --- */
+/* --- Style for store.html --- */
 
 .store-items {
     font-family: 'Bebas Neue', serif;
@@ -224,6 +227,12 @@ li {
     margin: 80px 10px;
 }
 
+#store-content {
+    margin-top:150px;
+    margin-bottom: 250px;
+}
+
+/* --- Style for about.html --- */
 #about-content{
     margin-top:100px;
     margin-bottom: 600px;
