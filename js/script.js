@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     $(".quantity").on("click", updateItemTotal);
-    $(".shipping").on("click", addShippingCost);
+    $(".shipping").on("click", updateFinalTotal);
     
     $("#submit-btn").click(function(e){
         
@@ -34,7 +34,8 @@ $(document).ready(function(){
         }
         
         updateSubtotal();
-        addShippingCost();
+        updateTax();
+        updateFinalTotal();
     }
     
     /*
@@ -53,10 +54,22 @@ $(document).ready(function(){
     }
     
     /*
+        Calculate tax based on the subtotal
+    */
+    function updateTax(){
+        let subtotal = parseFloat($("#subtotal").text());
+        let tax = subtotal * 0.08;
+        tax = tax.toFixed(2); // Set to 2 decimal places
+        $("#tax").html(`${tax}`);
+    }
+    
+    /*
         Get the shipping cost and add it to the cart Total
     */
-    function addShippingCost(){
+    function updateFinalTotal(){
         let total = parseFloat($("#subtotal").text());
+        // Add tax to total
+        total += parseFloat($("#tax").text());
         // Get the checked shipping radio box
         let shippingMethod = $("input[name='shipping']:checked").val();
         
@@ -72,7 +85,7 @@ $(document).ready(function(){
     }
     
     /*
-        Check that the user has items in their cart and chose a shipping method
+        Check if the user is allowed to check out
     */
     function checkInput(){
         let total = $("#subtotal").text();
@@ -80,15 +93,18 @@ $(document).ready(function(){
         let shipping = $("input[name='shipping']:checked").val();
         let userval = $("#username").val();
         
+        // If username and password are filled out
         if($("#username").val() == "" || $("#user-pw").val() == ""){
             console.log("in if statement");
             $("#error-msg").html("Please enter your username and password");
             return false;
         }
+        // If there are no items in the cart yet
         if(total == "0.00"){
             $("#error-msg").html("Please add items to your cart")
             return false;
         }
+        // If no shipping method has been selected 
         else if(!shipping){
             $("#error-msg").html("Please select a shipping method")
             return false;
