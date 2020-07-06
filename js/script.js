@@ -80,8 +80,6 @@ $(document).ready(function(){
         let shipping = $("input[name='shipping']:checked").val();
         let userval = $("#username").val();
         
-        
-        
         if($("#username").val() == "" || $("#user-pw").val() == ""){
             console.log("in if statement");
             $("#error-msg").html("Please enter your username and password");
