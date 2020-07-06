@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro&display=swap" rel="stylesheet">
         <!-- Add jQuery library from Google's CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/script.js"></script>
     </head>
     
     <body>
@@ -72,11 +72,11 @@
                         <li>Tax: $<span id="tax">0.00</span></li>
                         <li>Shipping Method: <br>
                             <!-- Radio buttons for shipping -->
-                            <input type="radio" class="shipping" name="shipping" value="fast">
+                            <input type="radio" class="shipping" name="shipping" id="fast" value="fast">
                             <label for="fast"> Two-Day <br> $12.99 </label>
                             
-                            <input type="radio" class="shipping" name="shipping" value="slow">
-                            <label for="slow"> Ground <br> $5.99 </label></span>
+                            <input type="radio" class="shipping" name="shipping" id="slow" value="slow">
+                            <label for="slow"> Ground <br> $5.99 </label>
                         </li>
                         <li id="total-label">Total: <span id="total">$0.00</span></li>
                     </ul>
@@ -95,7 +95,7 @@
         		<input type="password" name="user-pw" id="user-pw">
         		
         		<a id="submit-btn" href="order-placed.html">Place Order</a>
-                <h5 id="error-msg"></h5>
+                <h5 id="error-msg"> </h5>
             </div>
         </main>
         
