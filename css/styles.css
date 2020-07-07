@@ -162,8 +162,13 @@ li {
     padding: 10px;
 }
 
-#total-label {
-    font-size: 1.2em;
+.total-label {
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}
+
+.shipping-label {
+    padding:5px 5px 5px 10px;
 }
 
 /* Bottom box displaying user and password text fields */

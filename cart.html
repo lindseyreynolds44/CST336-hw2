@@ -65,20 +65,20 @@
                     </tr>
                 </table>
                 <section id="cart-total">
-                    <h4>Cart Total</h4>
+                    <h2>Cart Total</h2>
                     <hr>
                     <ul>
-                        <li>Subtotal: $<span id="subtotal">0.00</span></li>
-                        <li>Tax: $<span id="tax">0.00</span></li>
-                        <li>Shipping Method: <br>
+                        <li><span class="total-label">Subtotal:</span> $<span id="subtotal">0.00</span></li>
+                        <li><span class="total-label">Tax:</span> $<span id="tax">0.00</span></li>
+                        <li><span class="total-label">Shipping Method: </span><br>
                             <!-- Radio buttons for shipping -->
                             <input type="radio" class="shipping" name="shipping" id="fast" value="fast">
-                            <label for="fast"> Two-Day <br> $12.99 </label>
+                            <label class="shipping-label" for="fast"> Two-Day <br> $12.99 </label>
                             
                             <input type="radio" class="shipping" name="shipping" id="slow" value="slow">
-                            <label for="slow"> Ground <br> $5.99 </label>
+                            <label class="shipping-label" for="slow"> Ground <br> $5.99 </label>
                         </li>
-                        <li id="total-label">Total: <span id="total">$0.00</span></li>
+                        <li class="total-label">Total: <span id="total">$0.00</span></li>
                     </ul>
                 </section>
             </div>
@@ -87,14 +87,15 @@
             <h2>Customer Information</h2>
             <br>
             <div id="customer-wrapper">
+        		<form action="order-placed.html">
+        		    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required>
                 
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
-                
-                <label for="user-pw">Password</label>
-        		<input type="password" name="user-pw" id="user-pw">
+                    <label for="user-pw">Password</label>
+        		    <input type="password" name="user-pw" id="user-pw" required>
         		
-        		<a id="submit-btn" href="order-placed.html">Place Order</a>
+        		    <input id="submit-btn" type="submit" name="submit" value="Place Order">
+        		</form>
                 <h5 id="error-msg"> </h5>
             </div>
         </main>

@@ -2,9 +2,7 @@ $(document).ready(function(){
     
     $(".quantity").on("click", updateItemTotal);
     $(".shipping").on("click", updateFinalTotal);
-    
-    $("#submit-btn").click(function(e){
-        
+    $("form").submit(function(e){
         if(!checkInput()){
             e.preventDefault();
         }
@@ -91,24 +89,18 @@ $(document).ready(function(){
         let total = $("#subtotal").text();
         // Find out if shipping method has been selected
         let shipping = $("input[name='shipping']:checked").val();
-        let userval = $("#username").val();
         
-        // If username and password are filled out
-        if($("#username").val() == "" || $("#user-pw").val() == ""){
-            console.log("in if statement");
-            $("#error-msg").html("Please enter your username and password");
-            return false;
-        }
         // If there are no items in the cart yet
         if(total == "0.00"){
-            $("#error-msg").html("Please add items to your cart")
+            $("#error-msg").html("Please add items to your cart");
             return false;
         }
         // If no shipping method has been selected 
         else if(!shipping){
-            $("#error-msg").html("Please select a shipping method")
+            $("#error-msg").html("Please select a shipping method");
             return false;
         }
+        $("#error-msg").html("");
         return true;
     }
 })
