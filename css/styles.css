@@ -22,12 +22,18 @@ header{
 }
 
 /* Menu bar at the top of each page */
-.toolbar {
+.toolbar-wrapper {
     background-color: #3D405B; /* Blue */
     padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar {
+    width: 1100px;
+    text-align: right;
     font-size: 1.2em;
     text-decoration: none;
-    text-align: right;
 }
 
 .toolbar-item {
@@ -55,13 +61,18 @@ header{
     font-style: italic;
 }
 
-
 /* Banner undernearth the top menu toolbar */
-.banner {
+.banner-wrapper {
     background-color: #F4F1DE; /* Off white */
     padding: 25px;
-    font-size: 2em;
     box-shadow: 10px 10px 8px #888888;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    font-size: 2em;
+    width: 1000px;
 }
 
 .banner a {
@@ -253,7 +264,7 @@ footer {
     position: relative;
     top:300px;
     background-color: #F4F1DE; /* Off white */
-    padding: 25px;
+    padding: 25px 0;
     box-shadow: 8px 10px 10px 8px #888888;
 }
 
@@ -267,5 +278,4 @@ footer {
 
 .footer_content figure {
     margin: 0 20px;
-    padding: 0;
 }
