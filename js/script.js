@@ -20,14 +20,17 @@ $(document).ready(function(){
         // Find which item was updated
         if(item == "item1"){
             total = quantity * 24.99;
+            total = total.toFixed(2);
             $("#total1").html(`${total}`);
         } 
         else if(item == "item2"){
             total = quantity * 10.00;
+            total = total.toFixed(2);
             $("#total2").html(`${total}`);
         } 
         else if(item == "item3"){
             total = quantity * 24.99;
+            total = total.toFixed(2);
             $("#total3").html(`${total}`);
         }
         
