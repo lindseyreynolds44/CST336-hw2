@@ -5,13 +5,24 @@ nav, footer, main {
     text-align: center;
 }
 
-h2, h4 {
+h2, h4, .banner, .store-link, .store-items {
     font-family: 'Bebas Neue', serif;
+}
+
+.toolbar, #index-content, table, ul, #customer-wrapper, #construction-content, footer, #site-quote {
+    font-family: 'Maven Pro', serif;
+}
+
+header{
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:5;
 }
 
 /* Menu bar at the top of each page */
 .toolbar {
-    font-family: 'Maven Pro', serif;
     background-color: #3D405B; /* Blue */
     padding: 5px;
     font-size: 1.2em;
@@ -47,12 +58,10 @@ h2, h4 {
 
 /* Banner undernearth the top menu toolbar */
 .banner {
-    font-family: 'Bebas Neue', serif;
     background-color: #F4F1DE; /* Off white */
     padding: 25px;
     font-size: 2em;
     box-shadow: 10px 10px 8px #888888;
-    z-index: 10;
 }
 
 .banner a {
@@ -80,9 +89,10 @@ h2, h4 {
 
 /* Main contents of each page */
 main {
-    margin: 40px auto;
-    width: 1000px;
-    height: 100%;
+    position: relative;
+    top: 250px;
+    margin: 0 auto;
+    width: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,11 +101,14 @@ main {
 
 /* --- Style for index.html --- */
 
+#site-quote {
+    
+}
+
 #index-content {
     display:flex;
     justify-content: center;
-    font-family: 'Maven Pro', serif;
-    margin: 100px 20px;
+    margin: 50px 20px;
     
 }
 
@@ -103,7 +116,6 @@ main {
     border-radius: 25px;
     background-color: #E07A5F;
     color: white;
-    font-family: 'Bebas Neue', serif;
     font-size: 1.5em;
     padding: 10px;
     margin: 10px 30px;
@@ -123,7 +135,6 @@ main {
 table {
     border: 1px #3D405B solid;
     width: 700px;
-    font-family: 'Maven Pro', serif;
 }
 
 #table-header {
@@ -153,7 +164,6 @@ td {
 }
 
 ul {
-    font-family: 'Maven Pro', serif;
     list-style-type: none;
     text-align: left;
 }
@@ -173,9 +183,10 @@ li {
 
 /* Bottom box displaying user and password text fields */
 #customer-wrapper {
-    font-family: 'Maven Pro', serif;
     border: 1px #3D405B solid;
     padding: 30px 0;
+    margin: 20px 50px 100px 50px;
+    /*margin-bottom: 100px;*/
 }
 
 #user-pw, #username {
@@ -204,10 +215,10 @@ li {
 
 /* --- Style for construction.html --- */
 #construction-content {
-    font-family: 'Maven Pro', serif;
     margin-top:150px;
     margin-bottom:300px;
 }
+
 
 /* --- Style for order-placed.html --- */
 #order-placed-content {
@@ -219,7 +230,6 @@ li {
 /* --- Style for store.html --- */
 
 .store-items {
-    font-family: 'Bebas Neue', serif;
     font-size: 1.4em;
     display: flex;
     flex-direction: row;
@@ -232,7 +242,9 @@ li {
     margin-bottom: 250px;
 }
 
+
 /* --- Style for about.html --- */
+
 #about-content{
     margin-top:100px;
     margin-bottom: 600px;
@@ -242,7 +254,8 @@ li {
 /* --- Style for footer --- */
 
 footer {
-    font-family: 'Maven Pro', serif;
+    position: relative;
+    top:300px;
     background-color: #F4F1DE; /* Off white */
     padding: 25px;
     box-shadow: 8px 10px 10px 8px #888888;
